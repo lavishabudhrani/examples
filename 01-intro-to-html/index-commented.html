@@ -1,0 +1,163 @@
+<html>
+
+  <!-- This is a comment in HTML. It will not appear anywhere in the
+  web browser. -->
+
+  <!-- We always start the document with the <html> tag. This tells
+  the browser the file we're giving it is coded in HTML. -->
+
+  <head>
+
+    <!-- The <head> contains content we (generally) do not see. -->
+
+    <title>My web page</title>
+
+    <!-- The contents of the <title> tag appear in a browser tab. -->
+
+  </head>
+
+
+  <body id="start">
+
+    <!-- The <body> contains all content we see in the web browser.
+    Think of it as your canvas!
+
+    id="start" is something for a link we have set up below. It
+    is not required when building a page - - <body> will suffice.
+
+    -->
+
+    <h1>My First Web Page</h1>
+
+    <!-- Heading tags (<h1>, <h2>, <h3>, etc ... up to <h6>) are HTML's
+    versions of headlines, subheads, sub-subheads. They establish
+    an informational hierarchy. Do not use them in order. Use them in
+    the way you would for outlining information. -->
+
+    <p>This is a sentence.</p>
+
+    <!-- The <p> (paragraph) is pretty much the most common tag. If
+    your content isn't in a list, it will probably be wrapped in
+    <p> tags. -->
+
+    <h2>Lists</h2>
+
+    <h3>Ordered Lists</h3>
+
+    <!-- We're starting a subsection which demonstrates lists. This
+    is why we're using an <h2>. We'll have three sections in our
+    'Lists' section, therefore, we'll use an <h3> for each of those.
+    When we're done with 'Lists', we'll create a new section and
+    use an <h2>. -->
+
+    <!-- When we create lists, there are two parts: 1. the type of list
+    and 2. the list items. We cannot use the list items by themselves.
+    We must discern what kind of list those items are a part of!
+
+    Ordered lists will preface each item with a number; unordered lists
+    preface items with bullets. -->
+
+    <ol>
+      <li>California</li>
+      <li>Texas</li>
+      <li>Florida</li>
+    </ol>
+
+    <!-- Here, the order of our list matters; it indicates the order of
+    U.S. states by highest population.
+
+    Notice when as the <ol> tag is open, we indent our tags. This is
+    called 'nesting'. We should be nesting our tags throughout the HTML
+    document. -->
+
+    <h3>Unordered Lists</h3>
+
+    <ul>
+      <li>cat</li>
+      <li>fish</li>
+      <li>dog</li>
+    </ul>
+
+    <!-- By using <ul>, we're saying the order of the list items does
+    not matter. -->
+
+    <h3>Definition Lists</h3>
+
+    <dl>
+      <dt>hurricane</dt>
+      <dd>A tropical storm with winds greater than 74 <abbr title="miles per hour">mph</abbr>.</dd>
+    </dl>
+
+    <!-- Definition lists are slightly different. They require two
+    parts: the term (<dt>) and definition (<dd>). This format is ideal
+    for glossaries. -->
+
+    <!-- Some notes about the <abbr> tag. It is used to identify
+    abbreviations or acronyms. By itself, it doesn't have much value.
+    We use an attribute - - title - - and the value provides the detail
+    about what the abbreviation means; in this case, mph means "miles
+    per hour".
+
+    By default, a dotted underline appears under text wrapped in an <abbr>
+    tag when a title attribute is included. (If there's no title attribute,
+    it looks ... unchanged.) When a user hovers over the text, a tooltip
+    will appear with the contents of the title. -->
+
+
+    <h2>Links</h2>
+
+    <!-- Links never stand alone. They are usually part of some other
+    component of our web site, such as a paragraph, list, etc.
+
+    The <a> tag requires the href attribute (href stands for 'hypertext
+    reference'). We can link to:
+
+    1. An external web site.
+
+    2. A page within our web site.
+
+    3. A section within our web page.
+
+    The following two examples address Nos. 1 and 2. -->
+
+    <p>Sebastian the Ibis is the mascot of the <a href="http://miami.edu">University of Miami</a>.
+
+    <!-- When we link to an external web site - - a site other than our
+    own, we need to give it a 'fully qualified domain name'. This means
+    we have to indicate the protocol used (in this case 'http' or
+    'https' - - the 's' stands for secure), followed by the URL
+    ('uniform resource locator' - - or more easily described as a web
+    address).
+
+    We can't just write 'miami.edu' because the browser will not know
+    that address is a web site. It's the 'http(s)' which tells us the
+    address is a web site. -->
+
+    <p><a href="more-tags.html">More Tags</a></p>
+
+    <!-- If we only want to link to a page inside our own site, we just
+    have to indicate the file name (and the path to that file). In this
+    case, more-tags.html is in the same directory, so we can just use
+    the filename as the value.
+
+    We will have an in-depth lecture on paths to files, but for now,
+    keep all of your files in the same directory, reference the file
+    name in href (or 'src' - - which we will see later) and you will
+    have no problems! -->
+
+    <p><a href="#start">Return to Top</a></p>
+
+    <!-- It is also possible to link to a specific point on a page. In
+    this case, we need the link and we also need to supply the
+    destination - - in this case, the beginning of our page. This is
+    what id="start" is on our body tag; this link points specifically
+    to the tag with "start" as an identifier.
+
+    The hashtag (#) indicates we are looking within the page. The text
+    which follows tells us which id the browser should look for on the
+    page. The hashtag is not included in the id value.
+
+    We will have a more in-depth lecture on the id attribute. -->
+
+  </body>
+</html>
