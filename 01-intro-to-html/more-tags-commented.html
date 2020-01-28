@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>More Tags</title>
+  </head>
+
+  <body>
+    <h1>More Tags</h1>
+
+    <p><a href="index.html">My First Web Page</a></p>
+
+    <!-- Whenever we link from a page, it is generally a good idea to
+    link back. We'll get into more details about linking before we
+    start building our web site. -->
+
+
+    <h2>Images</h2>
+
+    <img src="sebastian.jpg" alt="Sebastian the Ibis, University of Miami mascot" />
+
+    <!-- <img> is a self-closing tag. As you can see, there is no text
+    to be wrapped. The 'src' attribute refers to the image file we want
+    displayed. (Again, as long as everything is in the same directory,
+    we only need to reference the file name.)
+
+    There is also the 'alt' attribute. This is *VERY* important. For
+    one, it provides alternate text for people using screen readers. It
+    gives search engines context as to what that image is. Finally, if
+    for some reason the image never loads or the image path in 'src' is
+    broken, that text will appear on the web page. It is a multi-
+    purpose fallback. -->
+
+
+    <h2>Text</h2>
+
+    <!-- Quick reminder: We are starting a new section, so we'll use
+    <h2> for the heading. -->
+
+    <p>The Gators are going to have a <em>good</em> season.</p>
+
+    <p>The Hurricanes are going to have a <strong>really good</strong> season.</p>
+
+    <p>There is absolutely nothing here to <i>emphasize</i>. <b>Okay?</b></p>
+
+    <!-- While <em> (emphasis) and <strong> (strong emphasis) make text
+    appear italicized and bold, respectively, we don't care about the
+    visuals. Remember: these *visual* enhancements mean nothing to
+    search engines or those who have visual impairments.
+
+    So we don't use <i> or <b> because they're easier ... we use <em>
+    or <strong> to provide context to the information we are sharing.
+    In this case, we're saying the words within <em> and <strong>
+    really (or really, really) matter.
+
+    In the paragraph where we use <i> and <b>, the words marked up with
+    these tags have no extra meaning. Where would we use these? If, say
+    we were writing a bibliography and text needed to be italic; we
+    wouldn't use <em> to emphasize a book name; we just need it to be
+    styled in italics to meet proper formatting requirements. -->
+
+
+    <blockquote>
+      <p>Go Canes!</p>
+      <p>&mdash; Sebastian the Ibis</p>
+    </blockquote>
+
+    <!-- A blockquote is like a pull quote. We generally use the <p>
+    tag within.
+
+    What's the &mdash; do?  It creates a 'medium dash' (—). We could
+    type the medium dash in our code editor and the browser should pick
+    it up. But some older browsers may not. When this happens, we need
+    to use a specially encoded character known as an 'HTML entity'.
+
+    All HTML entities start with an ampersand (&). They are followed by
+    either a small bit of text or a special number which transforms in
+    the browser.
+
+    A good search engine for this is:
+
+    http://www.amp-what.com/
+
+    It will give you the HTML entity codes for all characters - - even
+    emoji! -->
+
+
+    <p>This sentence has a footnote.<sup>1</sup></p>
+
+    <p>H<sub>2</sub>O is water.</p>
+
+    <!-- We can create superscript (<sup>) and subscript (<sub>).
+    Pretty self-explanatory. -->
+
+    <p>The curfew is from <del>midnight</del> <ins>10 p.m.</ins> to 5 a.m.</p>
+
+    <!-- If we want to show changes to a document, we can use the
+    <del> tag to show information which has been deleted; the <ins>
+    tag to show information which has been added.
+
+    Some blogs / web sites make it common practice to use these tags
+    to show changes. It's an honest and transparent way of presenting
+    information.
+
+    (Newspapers and other major media outlets tend to just add
+    corrections to the bottom of the page since it keeps the copy
+    clean for the reader.) -->
+
+
+    <h2>Tables</h2>
+
+    <!-- Review the example below as well as the information in your
+    book. You may want to try building a table on your own.
+
+    Identify what each part of the table is. What is a <tr>?
+    What about a <th>? How is that different from a <td>?
+
+    Notice the 'State' column has 'Florida' in each row. Learn how
+    to use the 'rowspan' attribute to make one 'Florida' appear
+    in both rows (as if the cells merged). Also, instead of 'City'
+    and 'State' table header, we can combine this into a header which
+    spans both the city and state and is titled 'Location'. Learn
+    how to use the 'colspan' attribute to do this. -->
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>School</th>
+        <th>City</th>
+        <th>State</th>
+      </tr>
+
+      <tr>
+        <td>Sebastian</td>
+        <td>Miami</td>
+        <td>Coral Gables</td>
+        <td>Florida</td>
+      </tr>
+
+      <tr>
+        <td>Albert</td>
+        <td>Florida</td>
+        <td>Gainesville</td>
+        <td>Florida</td>
+      </tr>
+    </table>
+
+  </body>
+</html>
