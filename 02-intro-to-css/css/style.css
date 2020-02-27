@@ -1,0 +1,159 @@
+/* This is a comment in CSS. */
+
+/*
+  Try to be comfortable with type, id, class and descendant selectors.
+  You will use these most in class.
+*/
+
+
+/* type selectors */
+
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #222;
+}
+
+/* Links */
+
+/*
+  We can style for 'states' of links: How they look when they have not
+  yet been visited, after they have been visited, when a user hovers
+  over them with a mouse and when clicked.
+
+  We used what are called 'pseudo-classes' to make this happen. These
+  are identified by appending a colon and the pseudo-class after a
+  selector.
+
+  (Your book says to use 'a:link', but this is unnecessary - - just use
+  'a' when styling default links.)
+
+  While we're doing this with links and colors (because that's how
+  they are predominantly used), pseudo-classes like :hover can be used
+  with any selector. You can do a lot of awesome things with hover
+  effects on things that are not links!
+*/
+
+a {
+  color: rgb(255,25,1); /* red-ish */
+}
+
+a:visited {
+  color: rgba(255,25,1,0.5); /* red-ish, half opacity */
+}
+
+a:hover {
+  color: rgb(53,22,166); /* blue-ish */
+}
+
+a:active {
+  color: rgb(255,234,0); /* yellow-ish */
+}
+
+/* Tips for styling links:
+
+  - Order does matter: default, visited, hover, active.
+
+  - When adding a hover color, be sure to provide something with
+    contrast compared with the default (and/or) visited color.
+    You want the user to know they are interacting with a link.
+
+  - Although the active state may be seen for only a split-second,
+    use another color which contrasts against the hover color.
+
+  - It has generally become an accepted practice to have the default
+    and visited colors be the same in which case you would combine
+    the selectors (i.e. a, a:visited { ... }). Consider doing something
+    above, though -- using the default color, but with transparency to
+    give the user a sense of links they have already visited.
+*/
+
+
+h1 {
+  font-size: 72px;
+}
+
+h3 {
+  display: inline-block;
+}
+
+cite {
+  display: block;
+}
+
+/*
+  It was asked in class: "What if we don't want the pink background
+  (applied using .pink-bg) to stretch across the entire page?"
+
+  Remember: h3 is a block element. We can use the 'display' property
+  to change elements from block to inline and vice versa. We can also
+  make them 'inline-blocks'.
+
+  I've also included cite (this is used around the word 'Wikipedia')
+  and is, by default, an inline element. Look what happens when we set
+  its display property to block!
+
+  We'll see this more when we talk about CSS's 'box model' ... but the
+  short version is 'inline-block' will make an element inline, while
+  still respecting some of the block properties.
+
+  (It was an excellent question, so I am including it here.)
+*/
+
+p,
+li {
+  color: rgb(99,58,115);
+}
+
+/*
+  When we have selectors which use the same declaration(s), we can
+  combine the selectors (in this case p and li) with a comma. The
+  rule will then apply to both p and li.
+*/
+
+/* decendant selector */
+
+ul li {
+  list-style-type: square;
+}
+
+footer {
+  background-color: #ccc;
+}
+
+footer p {
+  color: #222;
+}
+
+/*
+  Notice here we're targeting p tags within a footer. This is why the
+  color is different from the p declaration we set earlier.
+  Essentially, we're overwriting the p rule with a more specific one
+  which is limited to only p tags inside a footer.
+*/
+
+
+/* id selector */
+
+#special-kitty {
+  background-color: yellow;
+  color: red;
+}
+
+/*
+  Remember, in HTML, we must add an id attribute (and the associated)
+  value. In HTML, we do not include the hashtag. It is only used in
+  CSS.
+*/
+
+
+/* class selector */
+
+.pink-bg {
+  background: pink;
+}
+
+/*
+  Remember, in HTML, we must add an class attribute (and the
+  associated) value. In HTML, we do not include the dot (period). It is
+  only used in CSS.
+*/
