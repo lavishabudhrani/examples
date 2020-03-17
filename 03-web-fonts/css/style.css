@@ -1,0 +1,36 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Patua+One');
+
+/*
+  The @import always goes at the top of the style sheet. Notice there
+  is no use of the <style> tag in CSS. If the font hasn't been
+  imported, the browser won't know what fonts to use when they are
+  specified later.
+
+  Also, notice how two fonts are included in this URL. When you select
+  in Google Fonts, include multiple fonts/weights (but only what you
+  need!) once. Do not include two @imports!
+*/
+
+body {
+  font-family: "Lato", sans-serif;
+	font-weight: 400;
+}
+
+h1 {
+	font-family: "Patua One", sans-serif;
+}
+
+h2 {
+	font-weight: 700;
+}
+
+/*
+  When multiple font weights are used, it is important to specify which
+  weight is being used. In this case, the body text is Lato, normal
+  (400) weight. The h2, which inherits use of Lato from body, is using
+  a bold (700) weight. The h1 uses Patua One, which does not import
+  multiple weights. In this case, using the font-weight property is not
+  necessary.
+*/
