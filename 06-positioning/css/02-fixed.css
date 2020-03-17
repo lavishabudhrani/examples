@@ -1,0 +1,37 @@
+div {
+	width: 100px;
+	height: 100px;
+}
+
+main {
+	margin: 50px;
+	border: 3px solid #999;
+}
+
+#red {
+	background-color: red;
+}
+
+/*
+	We are moving the green box so it will always remain in the
+	bottom right corner of our browser window. 'fixed' moves the
+	element in relation to the browser window.
+
+	Even when we adjust the size of the browser, the green box
+	will remain in that bottom, right corner. Notice it overlaps
+	all other elements.
+
+	Fixed elements are popular for creating 'sticky' navigation
+	bars on web sites.
+*/
+
+#green {
+	background-color: green;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+#blue {
+	background-color: blue;
+}

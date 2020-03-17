@@ -1,0 +1,33 @@
+div {
+	width: 100px;
+	height: 100px;
+}
+
+main {
+	margin: 50px;
+	border: 3px solid #999;
+}
+
+#red {
+	background-color: red;
+}
+
+/*
+	We are moving #green based on where it begins in the natural
+	flow of elements. In this case, we're moving it -50 pixels
+	from the top and 50 pixels from the left.
+
+	Notice it overlaps the red box. We can change this ordering
+	with z-index. (See positioning-z-index.html for an example.)
+*/
+
+#green {
+	background-color: green;
+	position: relative;
+	top: -50px;
+	left: 50px;
+}
+
+#blue {
+	background-color: blue;
+}

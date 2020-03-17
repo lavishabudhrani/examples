@@ -1,0 +1,53 @@
+div {
+	width: 100px;
+	height: 100px;
+}
+
+/*
+	Step 1:
+
+	To position an element using 'absolute', we must first
+	determine which parent/ancestor element we want it confined
+	to; in this case, 'main'.
+
+	We set the position to main to be 'relative'. We do not need
+	to move main (using 'top' or 'bottom', 'left' or 'right'),
+	just change it from being 'static'.
+*/
+
+main {
+	margin: 50px;
+	border: 3px solid #999;
+	position: relative;
+}
+
+#red {
+	background-color: red;
+}
+
+/*
+	Step 2:
+
+	Once we have established where the element we want to move
+	should be 'fenced in' or limited to, we can set this to
+	'absolute' and move it accordingly.
+
+	If we fail to place 'position: relative;' on the
+	parent/ancestor we want to contain, the absolutely positioned
+	element will be moved relative to the browser window (kind of
+	like a fixed element ... but it won't be fixed).
+
+	If you want to see this example in action, comment out line 16
+	above.
+*/
+
+#green {
+	background-color: green;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#blue {
+	background-color: blue;
+}

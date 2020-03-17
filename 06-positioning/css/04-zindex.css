@@ -1,0 +1,66 @@
+div {
+	width: 100px;
+	height: 100px;
+}
+
+main {
+	margin: 50px;
+	border: 3px solid #999;
+}
+
+/*
+	Step 2:
+
+	Set #red to 'position: relative' so the element is not static.
+	Then set the z-index to a value higher than what was set for
+	#green (in this case, 20). The higher the number, the closer it
+	is to the front of the stacking order.
+
+	It is a good idea to set z-index values in increments of 5 or
+	10 -- values which have gaps. This allows us to add an element
+	between #red and #green later on without having to make major
+	adjustments to the code.
+
+	If, say, we set these values as:
+
+	#red: 2
+	#green: 1
+
+	... what happens if we wanted to add orange and yellow? We'd
+	have to re-arrange #red, #green and add #orange and #yellow.
+	Instead, try:
+
+	#red: 20
+	#orange: 17
+	#yellow: 13
+	#green: 10
+
+	And we still have room to add more between red-orange,
+	orange-yellow, etc.!
+*/
+
+#red {
+	background-color: red;
+	position: relative;
+	z-index: 20;
+}
+
+/*
+	Step 1:
+
+	Position #green so it overlaps the red one. Set the
+	z-index to 10.
+
+*/
+
+#green {
+	background-color: green;
+	position: relative;
+	top: -50px;
+	left: 50px;
+	z-index: 10;
+}
+
+#blue {
+	background-color: blue;
+}
