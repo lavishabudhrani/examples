@@ -1,0 +1,26 @@
+/*
+	Modify the overflow property to see how the page changes.
+
+	Values: visible, hidden, scroll, auto.
+*/
+
+div {
+	width: 300px;
+	height: 300px;
+	border: 3px solid #222;
+
+	overflow: visible; /* change me! */
+}
+
+/*
+  What does 'visible' do?
+
+	What does 'hidden' do?
+
+	What does 'scroll' do?
+
+	What does 'auto' do?
+
+	With overflow set to 'auto', create a new CSS rule which sets a width
+	on img to 250px. What happens?
+*/
