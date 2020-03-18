@@ -1,0 +1,16 @@
+@media (max-width: 414px) {
+
+	#wrapper {
+	  grid-template-columns: 1fr;
+	  grid-template-areas:
+	    "header"
+			"footer"
+			"main"
+	    "nav";
+	}
+
+  main {
+		display: block;
+	}
+
+}

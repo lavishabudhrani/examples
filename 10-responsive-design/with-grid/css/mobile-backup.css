@@ -1,0 +1,98 @@
+/* tablet version */
+@media(max-width: 768px) {
+  main {
+    display: block;
+  }
+
+  main section {
+    margin-bottom: 5px;
+  }
+
+  /*
+    Because all we're doing is changing main's two columns to one,
+    we can just return main to being a block element and the
+    sections within will stack as they normally would.
+
+    This works here because it's a simple design. But if there were
+    more sections in main, or a very intricate design, we might want
+    to readjust the grid as we did with #wrapper.
+  */
+}
+
+
+/* mobile phone version */
+
+@media(max-width: 414px) {
+  body {
+    background-image: none;
+  }
+
+  #wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer";
+    padding: 0;
+  }
+
+  /*
+    Because we don't really have room for columns on a phone, we change
+    our grid-template-columns to have one flexible unit (it will make
+    each element fill the space given to it) and set grid-template-areas
+    to have one area per row.
+
+    Notice we don't have to make any further changes to main. This is
+    because the way we styled main for tablet is inherited in this
+    format.
+
+    A very quick way to see this transformation from 'tablet' to
+    'mobile' is set Responsive Design mode to iPhone 7 Plus and toggle
+    between portrait and landscape mode.
+  */
+}
+
+
+
+/*
+  All styling below is solely for visibility and aesthetics. It has
+  no impact on the grid layout for web or mobile.
+*/
+
+header,
+footer {
+  background-color: #ddd;
+  padding: 0 5px;
+}
+
+#alpha,
+#beta {
+  background-color: #bbb;
+  padding: 5px;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+nav li {
+  margin-bottom: 5px;
+}
+
+nav li:last-child {
+  margin-bottom: 0;
+}
+
+nav a {
+  display: block;
+  background: #ccc;
+  padding: 12px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #aaa;
+}

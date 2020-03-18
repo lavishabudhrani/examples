@@ -1,0 +1,116 @@
+@media (max-width: 414px) {  /* iPhone Plus width */
+
+  body {
+    background-image: none;
+    font-size: 20px;
+  }
+
+  /*
+    Phones have smaller screens. It is good practice to increase the
+    font size. It doesn't have to be by much.
+
+    We also remove the background image since -- as we'll see below
+    -- we're not going to see it anyway.
+
+  */
+
+  #wrapper {
+    border: 0;
+    margin: 0;
+    padding: 10px; /* was equal to 24px! */
+  }
+
+  /*
+    In a browser, we have 600px to work with; we don't come close to
+    that on a mobile device. The max-width will still take care of
+    keeping the content constrained, but let's re-adjust our margin
+    and padding so we free up more pixels for content!
+  */
+
+
+  /* structural */
+
+  header span {
+    display: inline;
+  }
+
+  /*
+    We hid 'mobile' on our web version; we reveal it here!
+  */
+
+  nav ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  /*
+    Let's style the nav so each link is a bar which stretches across
+    the screen. We'll create a bigger 'clickable' area for our fat
+    fingers!
+  */
+
+  nav li {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  /*
+    We need to change li back to block so the 'buttons' stack on top of
+    one another. We also add some margin to the bottom so the button
+    backgrounds don't bleed into each other.
+  */
+
+  nav a {
+    display: block;
+    max-width: 100%;
+  }
+
+  /*
+    We need to change our a (by default, an inline element) to block so
+    we can apply the max-width property.
+  */
+
+  footer {
+    font-size: 100%;
+  }
+
+  /*
+    We've increased the font-size so it's more readable. Considering a
+    phone is for contacting people, we definitely want to make sure
+    this is extra visible!
+  */
+
+  footer a[href^="tel"] {
+    display: inline;
+  }
+
+  /*
+    We want our telephone number to appear on the mobile device only.
+    Like we did with 'header span' earlier, we hid any link in the
+    footer with an href attribute beginning with 'tel'. We reveal it
+    only in the mobile version.
+
+    Why hide it in the web version? Technology is improving to make
+    calls on a computer, but this isn't consistent across operating
+    systems -- will it use FaceTime? Skype? Is the person you're
+    calling going to be able to take the call on the platform you use?
+
+    On a mobile phone, you know it will *always* make a telephone call.
+  */
+
+
+  /* ids */
+
+  #video {
+    display: none;
+  }
+
+  /*
+    We've removed the video (and associated text) because a user may
+    not want to spend the bandwidth to view a video. (Also ... you
+    need JavaScript to properly resize an embedded video from Vimeo or
+    YouTube.)
+  */
+
+}

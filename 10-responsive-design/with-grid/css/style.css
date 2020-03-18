@@ -1,0 +1,100 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  background-image: url("../img/subtle_grunge.png");
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
+#wrapper {
+  background: rgba(255,255,255,0.5);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/* grid areas */
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+#alpha {
+  grid-area: alpha;
+}
+
+#beta {
+  grid-area: beta;
+}
+
+
+/* grid */
+
+#wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-gap: 20px;
+  grid-template-areas:
+    "header header"
+    "nav    main"
+    "footer footer"
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-template-areas:
+  "alpha beta"
+}
+
+header,
+footer {
+  background-color: #ddd;
+  padding: 0 5px;
+}
+
+#alpha,
+#beta {
+  background-color: #bbb;
+  padding: 5px;
+}
+
+nav ul {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+nav li {
+  margin-bottom: 5px;
+}
+
+nav li:last-child {
+  margin-bottom: 0;
+}
+
+nav a {
+  display: block;
+  background: #ccc;
+  padding: 12px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: #aaa;
+}

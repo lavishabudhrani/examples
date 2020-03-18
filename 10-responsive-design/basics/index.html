@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Design - Content</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1;" />
+
+    <!--
+      This is the tag which is partially responsible for handling how a
+      mobile web site looks on a mobile device.
+
+      The viewport can best be described as the physical screen size
+      on a device. In the case of an iPhone 4, 320px x 480px.
+
+      We set the width to 'device-width'. Some other devices recognize
+      this as well.
+
+      Initial scale tells us to display the content at a 1:1 scale.
+      Without this, the iPhone will show a 'zoomed out' version as
+      if it were 980px wide - - that's what mobile Safari /thinks/
+      the typical size of a web page is.
+    -->
+
+    <link href="css/style.css" media="screen" rel="stylesheet" />
+    <link href="css/mobile.css" media="screen" rel="stylesheet" />
+
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      <header>
+        <h1>My <span>Mobile</span> Web Site</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <section>
+          <p>This site is designed for both the web and mobile devices.</p>
+
+          <p>Note the differences in content between the two.</p>
+        </section>
+
+
+        <section id="video">
+          <p>While you're here, why not watch a neat video about the dangers of catnip?</p>
+
+          <iframe src="https://player.vimeo.com/video/44733000" allowfullscreen></iframe>
+        </section>
+
+
+        <section id="image">
+          <p>This is a responsive image!</p>
+          <img src="img/miami-skyline-original.jpg" alt="Miami, Florida" />
+        </section>
+      </main>
+
+      <footer>
+        <section>
+          <h2>Contact Information</h2>
+          <address>
+            Erin Brown<br/>
+            University of Miami<br/>
+            Wolfson 2011<br/>
+            <a href="tel:+13055551234">(305) 555-1234<br/></a>
+            <a href="http://twitter.com">@twitter</a>
+          </address>
+        </section>
+        <p>&copy; 2018. All Rights Reserved.</p>
+      </footer>
+
+    </div>
+
+  </body>
+</html>
