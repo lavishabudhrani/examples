@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Embedding Video: YouTube</title>
+  </head>
+
+  <body>
+
+    <!--
+
+      EMBEDDING YOUTUBE VIDEO
+
+      1. When embedding a YouTube video, click 'Share' (it is next to
+         the thumbs up/thumbs down part.
+
+      2. Next, click 'Embed'. This brings up a special window. At the
+         very top, you'll see a chunk of code (<iframe>). This is what
+         you will eventually embed, but there are some options to fix.
+
+      3. If you need/want the video to start at a specific point (maybe
+         it is a 10-minute video and your part begins 7 minutes in),
+         check 'Start at' and note the starting time.
+
+      4. You can now copy <iframe></iframe> (and all the attributes)
+         and paste it into your html.
+
+      ...
+
+      When you embed a web video you should take your design into
+      account when determining the size. By default YouTube uses a
+      width of 560 px.
+
+      What if you have a design that allows you to put a pretty big
+      video - - 960px - - into your page? You should take advantage of
+      that. Allow your user to solely focus on your video; that is what
+      you want them to do in the case of a portfolio. :)
+
+      To make your video fit your design, you'll need to do a simple
+      proportion. (Math, sorry. YouTube *used* to include a feature
+      which handled this for you but...). Using a width of 960px as an
+      example...
+
+      560px   960px
+      ===== = =====
+      315px     x
+
+      We cross-multiply: (315 * 960) = 560x
+
+      Then divide by 560 in this case.  302,400 / 560 = x
+
+      The value of x (the height of the video) is 540px.
+
+      ...
+
+      Within the <iframe> tag, you will see width and height
+      attributes. Use the values from your calculation to change the
+      size of the video:
+
+      <iframe width="960" height="540" ...
+
+      Again, the video can be adjusted to any size to fit your design.
+      You just have to figure out the proportion.
+
+    -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/q99rhZlYlAo?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Background Image</title>
+    <style>
+
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+
+        background-image: url("img/golden-gate.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      main {
+        background-color: rgba(255,255,255,0.5);
+        border: 1px solid #222;
+        width: 450px;
+        padding: 1em;
+      }
+
+      section p:before {
+        content: " • ";
+      }
+
+      section p:first-child:before {
+        content: "";
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <main>
+      <section>
+
+        <p><strong>Notes:</strong></p>
+
+        <p>When you choose a background image, be aware it <em>may</em> force you to alter your design. Assume by default you want to center your layout, but the image's focal point is to the left (and appears underneath your content). Your better bet is to shift the content to the left, as in this example.</p>
+
+        <p>Be cautious with the image you select. Don't choose something <em>too</em> busy. If you do choose something borderline busy, make sure it does not interfere with the text. One option is to increase the opacity of the container with your text. In this case, the background is half-transparent; the last (alpha / transparency) value in rgba could be increased.</p>
+
+        <p>Be sure to re-size your image so it is not massive in file size. You do not want a 1MB+ background. Be sure to adjust this in Photoshop. Remember, because it is going to be a background, it does not have to be of obscenely high quality. Keep the file size low. In this example, 'golden-gate.jpg' is 373k -- and I know I could do better.</p>
+
+        <p>I generally re-size the file dimensions to 2880x1920 -- the size of a 15" retina MacBook Pro. According to <a href="http://screensiz.es/">screensiz.es</a>, there are only five monitors with dimensions bigger. If you try to accommodate the <em>best</em> monitor available, the file size of the background image is going to be ginormous ... and users with smaller screens will suffer.</p>
+
+        <p>In applying your background image, if you use the <code>background-size: cover;</code> property / value, it will scale the image as large as possible without stretching the image.</p>
+
+        <p>If you don't want the image to 'scroll' as content scrolls, use <code>background-attachment: fixed;</code>. You can see the effect here if you have a smaller screen -- the text scrolls, the background image does not move.</p>
+      </section>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+article {
+  margin-bottom: 25px;
+}
+
+/*
+  This is not necessarily a cut-and-paste solution. The CSS is
+  specific to this example in regards to the selectors used.
+*/

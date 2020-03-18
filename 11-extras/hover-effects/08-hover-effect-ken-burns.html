@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hover Effect: Ken Burns Effect</title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+
+      div {
+        border: 1px solid #ccc;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      div:hover img {
+        animation: kenburns 5s infinite;
+      }
+
+      @keyframes kenburns {
+        0% {
+          transform: scale3d(1,1,1) translate3d(0px, 0px, 0px);
+          transition: all 1s ease-in;
+        }
+        50% {
+          transform: scale3d(1.5, 1.5, 1.5) translate3d(-20px, -20px, 0px);
+          transition: all 1s ease-in;
+        }
+        100% {
+          transform: scale3d(2, 2, 2) translate3d(-50px, -50px, 0px);
+          transition: all 1s ease-in;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Hover Effect: Ken Burns Effect</h1>
+    </header>
+
+    <!-- Thank you to Joe Pierce for this idea! -->
+
+    <main>
+      <div>
+        <img src="img/flynn.jpg" alt="Flynn the cat" />
+      </div>
+    </main>
+  </body>
+</html>

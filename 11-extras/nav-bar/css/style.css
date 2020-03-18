@@ -1,0 +1,35 @@
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/*
+
+  There are four steps to set up a horizontal navigation bar:
+
+  - remove the bullets from a list
+  - remove the padding on the left side of the ul (or ol)
+  - change each list item to display inline-block
+  - put whitespace on the right side of each list item
+
+  Why inline-block?
+
+  'Inline' is what allows each list item to appear next to each other
+  instead of on top of each other. The 'block' part allows us to use
+  box model properties like margin, padding and border.
+
+  What next?
+
+  From this point, you can style this in whatever creative way you
+  can imagine. Change box model properties. Add a border to make
+  buttons. Change colors. Change hover states.
+
+  You have learned of many tools which can be applied here! :)
+
+*/

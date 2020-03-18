@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fixed Navigation Bar</title>
+    <style>
+
+      header {
+        margin-top: 46px;
+        /*
+          Why 46px? We can determine the height of the nav bar by using
+          Dev Tools. In this case, the nav bar is 38px tall. We add a
+          couple more pixels to balance the whitespace between the
+          bottom of the nav and the header.
+        */
+      }
+
+      nav {
+        background-color: #eee;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /*
+          If you prefer to have the bar move off screen when a user
+          scrolls, changed position to absolute. Fixed will keep it
+          on page when a user scrolls.
+        */
+      }
+
+      nav ul {
+        margin: 0 0 0 8px;
+        padding-left: 0;
+        list-style: none;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-right: 30px;
+        padding: 10px 0;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>News Tribune</h1>
+    </header>
+
+    <!--
+
+      In this example we're going to place the nav bar *above* the
+      header - - and we're not going to sacrifice the structure of our
+      html to do this.
+
+      Notice the nav is *outside* of the header tag. This is so we can
+      move it independently of header.
+
+    -->
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="us.html">U.S.</a></li>
+        <li><a href="world.html">World</a></li>
+        <li><a href="business.html">Business</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="arts.html">Arts</a></li>
+      </ul>
+    </nav>
+
+
+    <p>This list should not change!</p>
+
+    <ul>
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Carrot</li>
+    </ul>
+
+  </body>
+</html>

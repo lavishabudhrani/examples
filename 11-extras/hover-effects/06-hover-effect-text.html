@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hover Effect: Text</title>
+    <style>
+      body {
+        font-size: 16px;
+        font-family: sans-serif;
+      }
+
+      div {
+        border: 1px solid #ccc;
+        width: 300px;
+        height: 300px;
+        display: inline-block;
+        margin-right: 1em;
+        overflow: hidden;
+        position: relative;
+      }
+
+      h2 {
+        margin: 0;
+      }
+
+      div h2 {
+        position: absolute;
+        bottom: -32px;
+        transition: bottom 1s ease-in;
+      }
+
+      div:hover h2 {
+        bottom: 0;
+        transition: bottom 1s ease-in;
+      }
+
+      /*
+        This effect uses positioning to hide an element (in this case,
+        h2), then bring it into view when we interact with its
+        containing element.
+
+        No new properties are used here!
+      */
+
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Hover Effect: Text</h1>
+    </header>
+
+    <main>
+      <div>
+        <h2>Hello there!</h2>
+      </div>
+
+      <div id="alt">
+        <h2>Hello to you, too!</h2>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Audio</title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      audio {
+        display: block;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <h1>HTML5 Audio</h1>
+
+    <!--
+      IMPORTANT! As with all other media, be sure you have the rights
+      to use the audio file!
+
+
+      Details about <audio> can be found at:
+
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+
+      You also want to read about audio formats supported by browsers:
+
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats
+
+      For this course, getting it working is the goal. If you keep
+      the web site and want to improve it, adding a (backup) format
+      like .ogg is a good idea.
+
+
+      NOTES:
+
+      - If you only have one source file, use the first example.
+        If/when you include backup formats, use the second.
+
+      - Modern browsers do support HTML5 audio, and most people use
+        modern browsers. However, you still want to add the message in
+        case a user visiting the site is on a very old computer.
+
+      - NEVER add the autoplay option. NEVER. Autoplay annoys people.
+
+      - Make sure to add controls so a user can adjust volume,
+        pause/resume playing, seek to a specific point in the audio.
+
+      - At a minimum, consider preloading the metadata information
+        (i.e. length of song) with the 'preload="metadata"' attribute
+        and value. You may want to preload the full file if the size
+        is not unreasonable. Think of it in the same context of an
+        image: you don't want to eat up (mobile) data plans if the
+        file size is greater than 1MB. (In this example, cat-meow.mp3
+        is only 27k; preload here would be okay.)
+
+      - <audio> is an inline element, so if you need to adjust
+        placement for your design, you may change it to a block. (See
+        styles above.)
+    -->
+
+
+
+    <!-- Basic setup (one source file): -->
+
+    <audio src="audio/cat-meow.mp3" controls="controls" preload="metadata">
+      <p>Your browser does not support <strong>HTML5 audio</strong>. Why not download a <a href="https://browsehappy.com/">web browser</a> which does?</p>
+    </audio>
+
+
+    <!--
+      Multiple source files:
+    -->
+
+    <audio controls="controls" preload="metadata">
+      <source src="audio/cat-meow.mp3" type="audio/mpeg" />
+      <!-- <source src="audio/cat-meow.ogg" type="audio/ogg" /> -->
+      <p>Your browser does not support <strong>HTML5 audio</strong>...
+    </audio>
+
+  </body>
+</html>

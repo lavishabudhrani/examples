@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unique / Background Bullets</title>
+    <style>
+
+      body {
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      /*
+        This technique doesn't use list-style, rather an old-school
+        (but still valuable) hack to create a bullet-like effect,
+        by placing a background image where a bullet would be.
+
+        Notice we're applying the bullet to a, not li, in order for
+        this to work!
+      */
+
+      li a {
+        padding-left: 20px;
+        background-image: url("img/star.png");
+        background-repeat: no-repeat;
+        line-height: 1.25;
+      }
+
+      /*
+
+        We apply padding on the left side of each list item to
+        accommodate space for our graphic. For example, if you have
+        an image which is 16px, add an extra 4px of padding so the
+        graphic and text do not collide. (You may adjust as you see
+        fit.)
+
+        We should include a default background image so if our rules
+        below do not match a specific list item, something appears.
+        Otherwise a lack of bullets may look weird! :(
+
+        By default, a background (image) repeats. We only want it to
+        only appear once, hence the 'no-repeat'.
+      */
+
+      li a[href*="facebook"] {
+        background-image: url("img/facebook.png");
+      }
+
+      li a[href*="instagram"] {
+        background-image: url("img/instagram.png");
+      }
+
+      li a[href*="twitter"] {
+        background-image: url("img/twitter.png");
+      }
+
+      /*
+        What's going on here? We're using the value within 'href' for
+        each link to determine which image should be used.
+        Specifically, we are using 'attribute' selectors.
+
+        a[href] ... looks for any a tag with an 'href' value.
+
+        a[href*=""] ... looks for any a tag with an 'href' value which
+        contains whatever is inside the quotes (i.e. facebook). If
+        there is a match, the background-image will be applied.
+
+      */
+
+    </style>
+  </head>
+
+  <body>
+
+    <h1>My Web Site</h1>
+
+    <h2>Social Media</h2>
+
+    <ul>
+      <li><a href="http://facebook.com/">Facebook</a></li>
+      <li><a href="http://instagram.com/">Instagram</a></li>
+      <li><a href="http://snapchat.com">Snapchat</a></li>
+      <li><a href="http://twitter.com/">Twitter</a></li>
+    </ul>
+
+  </body>
+</html>
