@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery Plugin</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/twentytwenty.css" rel="stylesheet" />
+    <!--
+      Sometimes plugins have their own stylesheets to add. Add your
+      styles first, then plugin styles.
+    -->
+  </head>
+
+  <body>
+    <header>
+      <h1>jQuery</h1>
+    </header>
+
+    <main>
+      <div id="image-container">
+        <img src="img/city-before.jpg" alt="City Underground: Before" />
+        <img src="img/city-after.jpg" alt="City Underground: After" />
+      </div>
+
+      <p><a href="http://zurb.com/playground/twentytwenty">Plugin: TwentyTwenty</p>
+    </main>
+
+
+    <!--
+      We can download the jQuery library to host on our own server...
+    -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!--
+      ... or include a link to a content delivery network (CDN) which
+      hosts jQuery:
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    -->
+
+    <!--
+      After the jQuery library is loaded, add plugin scripts.
+    -->
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+
+    <!--
+      Load original scripts or settings for the plugin last.
+    -->
+    <script>
+      $(function() {
+        $("#image-container").twentytwenty();
+      });
+    </script>
+
+    <!--
+      The code above can also be placed in its own file and called
+      using the src attribute. This is the better option if the
+      plugin(s) you are using appear on multiple pages. See
+      js/settings.js.
+    -->
+
+  </body>
+</html>
