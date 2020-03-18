@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        grid-gap: 20px;
+      }
+
+      /*
+        With the above, we have created a 12-box grid, four columns
+        wide and three rows tall (numbers indicate grid lines):
+
+        1   2   3   4   5
+        +===+===+===+===+ 1
+        |   |   |   |   |
+        +===+===+===+===+ 2
+        |   |   |   |   |
+        +===+===+===+===+ 3
+        |   |   |   |   |
+        +===+===+===+===+ 4
+
+      */
+
+
+      #a {
+        grid-column-start: 1;
+        grid-column-end: 5;
+      }
+
+      /*
+        grid-column-end can also use the value -1 since we want the
+        grid cell to stretch across the entire grid.
+
+        We can also write this in shorthand:
+
+        grid-column: 1 / 5; (or grid-column: 1 / -1)
+
+        After implementing this first css block, our page should look
+        like:
+
+        +===+===+===+===+
+        | A             |
+        +===+===+===+===+
+        | B | C | D |   |
+        +===+===+===+===+
+        |   |   |   |   |
+        +===+===+===+===+
+
+      */
+
+
+      #b {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      /*
+        When we want a grid cell to remain where it is or only span
+        one track, we can just give the grid line number where it
+        begins for both the column and row. You _could_ write the
+        end lines...
+
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        ...but this is not necessary.
+
+      */
+
+
+      #c {
+        grid-column: 2 / span 2;
+      }
+
+      /*
+
+        Another way of setting a grid cell is by indicating its
+        starting grid number, then use the 'span' keyword and the
+        number of cells to span, in this case, two. The above
+        is the equivalent of writing:
+
+        grid-column: 2 / 4;
+
+        ... and it gives us this layout now:
+
+        +===+===+===+===+
+        | A             |
+        +===+===+===+===+
+        | B | C     | D |
+        +===+===+===+===+
+        |   |   |   |   |
+        +===+===+===+===+
+
+      */
+
+
+      #d {
+        grid-column: 3 / 5;
+      }
+
+      /*
+
+        Up to this point, we have not specified any cells to be used
+        on the third row. Say we want Box D to appear on the third
+        row, starting on the third grid line. We can use the above
+        grid-column property to make it happen. The box will
+        automatically shift to the third row.
+
+        Another possible combination to create the same layout:
+
+        #d {
+          grid-column: 3 / span 2;
+          grid-row: 3;
+        }
+
+        And that gives us:
+
+        +===+===+===+===+
+        | A             |
+        +===+===+===+===+
+        | B | C     | W
+        +===+===+===+===+
+        |   |   | D     |
+        +===+===+===+===+
+
+        This allows us to leave white space (indicated by W)!
+
+      */
+
+
+      /* Write your styles above this line! */
+
+      .grid div {
+        border: 1px solid rgb(12,71,162);
+        border-radius: 3px;
+        background-color: rgba(12,71,162,0.8);
+        padding: 0.2rem;
+        color: #fff;
+      }
+
+      .grid div:nth-of-type(2n) {
+        background-color: rgba(12,71,162,0.6);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="a">Box A</div>
+      <div id="b">Box B</div>
+      <div id="c">Box C</div>
+      <div id="d">Box D</div>
+    </div>
+
+  </body>
+</html>

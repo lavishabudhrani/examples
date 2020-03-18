@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      /*
+
+        Since CSS grid is so new, there may be browsers which do not
+        support all this hard work. As of Nov. 2018, caniuse.com notes
+        85 percent of users have a browser which supports CSS grid.
+
+        But what about those who do not?
+
+        We can use the @supports query to ask the browser if it
+        supports CSS grid. If it does, the message will not display.
+        But if a user has a browser which does not support grid...
+        we give them an option to download a new one which does!
+
+      */
+
+      .message {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      @supports(display: grid) {
+        .message {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <p class="message">You need a browser which supports CSS Grid! Why not <a href="https://browsehappy.com/">download</a> a browser which does?</p>
+
+    <div class="grid">
+      <div id="masthead">Header</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="article">Article</div>
+      <div id="footer">Footer</div>
+    </div>
+
+  </body>
+</html>

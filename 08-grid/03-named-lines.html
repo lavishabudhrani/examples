@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 2fr [content-start] 4fr [content-end];
+        grid-template-rows: 200px [content-start] 200px [content-end];
+        grid-gap: 20px;
+      }
+
+      /*
+
+        Here we are creating a two-column grid, but we're renaming
+        grid line for both column and row 2 to 'content-start' and
+        grid-line 3 to 'content-end'.
+
+        This defines a _grid area_.
+
+      */
+
+      #article {
+        grid-column: content-start;
+        grid-row: content-start;
+      }
+
+      /*
+        What we've done here is told the browser, 'begin our article
+        on column grid line 2 (which we named content-start) and row
+        grid line 2 (which we, er, also named content-start -- but it
+        is a different content-start).
+
+        This moves the article into the bottom right corner of the
+        grid. (If you comment out the above rule to see the default
+        layout, then add it back, you'll see the change.)
+
+        We begin with (not drawn to scale):
+
+        +===========+============+
+        | Masthead  | Article    |
+        +===========+============+
+        | Sidebar   | Footer     |
+        +===========+============+
+
+        And the rule above changes our layout to:
+
+        +===========+============+
+        | Masthead  | Sidebar    |
+        +===========+============+
+        | Footer    | Article    |
+        +===========+============+
+
+        Why is this such a big deal? We'll see this next in Magic
+        Lines, Part 1.
+
+      */
+
+
+      /* Write your styles above this line! */
+
+      .grid div {
+        border: 1px solid rgb(12,71,162);
+        border-radius: 3px;
+        background-color: rgba(12,71,162,0.8);
+        padding: 0.2rem;
+        color: #fff;
+      }
+
+      .grid div:nth-of-type(2n) {
+        background-color: rgba(12,71,162,0.6);
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="masthead">Masthead</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="article">Article</div>
+      <div id="footer">Footer</div>
+    </div>
+
+  </body>
+</html>

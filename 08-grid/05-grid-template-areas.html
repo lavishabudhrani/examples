@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      /*
+        If named grid lines can define a grid area, can creating a
+        grid area define grid lines? :)
+
+        Let's see...
+
+        First, let's define our grid areas for each id. Grid area
+        names are not element, id or class dependent ... but for
+        the sake of your own sanity, it might be good to use the
+        same name.
+
+      */
+
+
+      #masthead {
+        grid-area: masthead;
+      }
+
+      #sidebar {
+        grid-area: sidebar;
+      }
+
+      #article {
+        grid-area: article;
+      }
+
+      #footer {
+        grid-area: footer;
+      }
+
+
+      .grid {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-template-rows: 200px 200px;
+        grid-gap: 20px;
+
+        /* Now let's create a template for our grid: */
+
+        grid-template-areas:
+        "masthead"
+        "article"
+        "sidebar"
+        "footer";
+
+        /* Yes, notice article and sidebar are swapped. */
+
+        /*
+
+          Okay, one column is nice, but we created a two-column grid.
+
+          When you want an area to stretch across multiple columns,
+          use the grid-area name twice
+
+          Comment out the grid-template-area above and uncomment the
+          following:
+
+          grid-template-areas:
+          "masthead masthead"
+          "sidebar article"
+          "footer footer";
+
+
+          The content within the quotes is not white space sensitive. So
+          you can line up the names if it makes thing clearer for you:
+
+          "masthead  masthead"
+          "sidebar   article"
+          "footer    footer";
+
+
+          Also, if you do not have a cell to fill with actual content, you
+          can use a period (.) to insert a cell of white space. For
+          instance:
+
+          "masthead ."
+          "sidebar  article"
+          ".        footer";
+
+
+          Always remember the semicolon at the end of the last line,
+          otherwise the template will not work.
+
+        */
+      }
+
+
+      /* Write your styles above this line! */
+
+      .grid div {
+        border: 1px solid rgb(12,71,162);
+        border-radius: 3px;
+        background-color: rgba(12,71,162,0.8);
+        padding: 0.2rem;
+        color: #fff;
+      }
+
+      .grid div:nth-of-type(2n) {
+        background-color: rgba(12,71,162,0.6);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="masthead">Masthead</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="article">Article</div>
+      <div id="footer">Footer</div>
+    </div>
+
+  </body>
+</html>

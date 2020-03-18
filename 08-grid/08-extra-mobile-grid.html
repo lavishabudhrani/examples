@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      #masthead {
+        grid-area: masthead;
+      }
+
+      #sidebar {
+        grid-area: sidebar;
+      }
+
+      #article {
+        grid-area: article;
+      }
+
+      #footer {
+        grid-area: footer;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-auto-rows: 200px;
+        grid-gap: 20px;
+        grid-template-areas:
+        "masthead  masthead"
+        "sidebar   article"
+        "footer    footer";
+      }
+
+      /*
+        What if we want to change the layout of our page to be
+        responsive for someone viewing it on a tablet? It's
+        as simple as using a media query (similar to the @supports
+        query in 07-contingency-plans).
+
+        We'll address this in a future class, but I'm posting it
+        to show you what possibilities exist.
+
+        In the example below, we set the max-width to 768px, which
+        is pretty standard for a tablet.
+      */
+
+      @media(max-width: 768px) {
+        .grid {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "masthead"
+          "article"
+          "sidebar"
+          "footer";
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="masthead">Masthead</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="article">Article</div>
+      <div id="footer">Footer</div>
+    </div>
+
+  </body>
+</html>

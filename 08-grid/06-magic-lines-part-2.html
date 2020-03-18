@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magic Lines, Part 2</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      /*
+        Since grid areas define grid lines (for both rows and columns),
+        we can also use these to place other items on the grid.
+      */
+
+      #masthead {
+        grid-area: masthead;
+      }
+
+      #sidebar {
+        grid-area: sidebar;
+      }
+
+      #article {
+        grid-area: article;
+      }
+
+      #footer {
+        grid-area: footer;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 2fr 4fr ;
+        grid-template-rows: 200px 200px;
+        grid-gap: 20px;
+        grid-template-areas:
+          "masthead  masthead"
+          "sidebar   article"
+          "sidebar   footer";
+      }
+
+      .grid .test {
+        background-color: rgba(255,0,0,0.5);
+        grid-row: masthead-start / article-end;
+        grid-column: article-start;
+      }
+
+      /*
+        The lines used in this example are based on the
+        grid-template-areas property we defined earlier.
+
+        Notice we need to define the start/end lines of the grid
+        area. We can also mix-match which start/end lines are used to
+        place a new element on the grid.
+      */
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="masthead">Header</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="article">Article</div>
+      <div id="footer">Footer</div>
+      <div class="test">We added content!</div>
+    </div>
+
+  </body>
+</html>

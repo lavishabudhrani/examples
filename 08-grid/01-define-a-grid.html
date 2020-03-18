@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Define a Grid</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px 100px;
+        grid-auto-rows: 300px;
+        grid-gap: 20px;
+      }
+
+      /*
+        We can also use the following values for grid-template-columns
+        and grid-template rows:
+
+        - pixels (200px)
+        - fractional units (1fr)
+        - auto
+
+        There are also notations we can use:
+
+        - repeat() (when you want the same thing multiple times)
+        - minmax() (when you want a minimum height/width or max
+                    height/width)
+
+        All of the above can be mixed and matched to create a unique
+        grid space.
+
+        grid-template-columns and grid-template-rows create an
+        'explicit' grid -- a grid _we_ define.
+
+        grid-auto-columns and grid-auto-rows allows us to make
+        modifications to the 'implicit' grid -- elements which
+        are part of our grid, but may not fall into the definition
+        we create through our template.
+
+        grid-gap is shorthand for grid-column-gap and grid-row-gap.
+        grid-gap will apply a value (i.e. 20px) equally between
+        columns and rows.
+
+      */
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="a">Box A</div>
+      <div id="b">Box B</div>
+      <div id="c">Box C</div>
+
+      <div id="d">Box D</div>
+      <div id="e">Box E</div>
+      <div id="f">Box F</div>
+
+      <div id="g">Box G</div>
+      <div id="h">Box H</div>
+    </div>
+
+  </body>
+</html>

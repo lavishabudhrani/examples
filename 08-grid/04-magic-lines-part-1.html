@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Line-based Positioning</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 2fr [content-start] 4fr [content-end];
+        grid-template-rows: [content-start] 200px [content-end] 200px;
+        grid-gap: 20px;
+      }
+
+      /*
+
+        So why are named lines special? When they are defined for
+        columns and rows, they create a _grid area_. And we can
+        use that grid area name for any element on our page.
+
+        What we have is (not to scale):
+
+        +====+=========+
+        |    | Content |
+        +====+=========+
+        |    |         |
+        +====+=========+
+
+        If you look below, we have added a 'test' div to our grid.
+        Uncomment the rule just before the end of the style tag
+        and see how it changes our layout!
+
+        You'll see just by indicating we want .test in the grid area
+        named 'content', it will show up there.
+
+        (This gets even better in the next part... trust me...)
+
+      */
+
+      #content {
+        grid-column: content-start;
+        grid-row: content-start;
+      }
+
+
+      /* Write your styles above this line! */
+
+      .grid div {
+        border: 1px solid rgb(12,71,162);
+        border-radius: 3px;
+        background-color: rgba(12,71,162,0.8);
+        padding: 0.2rem;
+        color: #fff;
+      }
+
+      .grid div:nth-of-type(2n) {
+        background-color: rgba(12,71,162,0.6);
+      }
+
+      /*
+        This has to be written here so it overwrites the background
+        colors we set right above.
+
+        Uncomment this and see what it does to our .test div!
+
+      .grid > .test {
+        grid-area: content;
+        background-color: red;
+        border: 1px solid #aaa;
+      }
+
+      */
+
+    </style>
+  </head>
+
+  <body>
+
+    <div class="grid">
+      <div id="masthead">Header</div>
+      <div id="sidebar">Sidebar</div>
+      <div id="content">Article</div>
+      <div id="footer">Footer</div>
+      <div class="test">We added this to the page!</div>
+    </div>
+
+  </body>
+</html>
