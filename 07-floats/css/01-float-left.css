@@ -1,0 +1,20 @@
+#wrapper {
+	max-width: 600px;
+}
+
+#box {
+	width: 200px;
+	height: 200px;
+	background-color: rgb(14,45,116);
+	float: left;
+	margin-right: 20px;
+}
+
+/*
+  When floating an element, make sure you also apply margin on the
+	opposite side (and bottom if necessary). This will keep the text
+	from bumping against the floated element.
+
+	This is not a technical requirement -- more of a good design
+	principle!
+*/

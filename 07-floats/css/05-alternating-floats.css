@@ -1,0 +1,45 @@
+#wrapper {
+	max-width: 600px;
+}
+
+#box1 {
+	float: left;
+	margin-right: 20px;
+}
+
+#box2 {
+	float: right;
+	margin-left: 20px;
+}
+
+.box {
+	width: 200px;
+	height: 200px;
+	background-color: rgb(14,45,116);
+	margin-bottom: 20px;
+}
+
+/*
+  Because each container will collapse when the box inside is floated,
+  we use 'overflow: auto' to eliminate it!
+*/
+.container {
+	overflow: auto;
+}
+
+/*
+  The clear is applied separately.
+
+	Why not put the two together? Maybe there is a case on your page/site
+	which only requires a clear, not a fix for a collapsing container. In
+	this case it's better to separate the two properties into separate
+	rules so they can be applied as needed.
+
+	The html actually has an example of this -- we don't need to change
+	the overflow property on the last paragraph, we just want that
+	paragraph to clear the floats!
+*/
+
+.clear {
+	clear: both;
+}

@@ -1,0 +1,31 @@
+#wrapper {
+	max-width: 600px;
+}
+
+#box {
+	width: 200px;
+	height: 200px;
+	background-color: rgb(14,45,116);
+	float: left;
+	margin-right: 20px;
+
+	/* Or:
+		float: right;
+		margin-left: 20px;
+	*/
+}
+
+/*
+  We create a class selector which will apply a clear to any element
+	which should resume the natural flow.
+
+	When the element is floated left, we could use 'clear: left'. When
+	the element is floated right, we could use 'clear: right'. But...
+
+	'clear: both' will stop a float on either the left or the right --
+	or both!
+*/
+
+.clear {
+	clear: both;
+}
