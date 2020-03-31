@@ -1,0 +1,51 @@
+body {
+  font-size: 16px;
+	font-family: sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  background: #333;
+  color: #eee;
+}
+
+nav {
+  background: #eee;
+}
+
+/*
+  The following is optional. It simply provides more whitespace between
+  each primary navigation item.
+
+  li {
+    margin-right: 10px;
+  }
+
+*/
+
+/*
+  The following creates a bigger, clickable area for each link. By
+  default, the a tag is an inline element. Changing it to block
+  allows us to apply padding. Notice you do not have to hover right
+  over the word for the link to work!
+*/
+
+li > a {
+  display: block;
+  padding: 10px;
+}
+
+/*
+  Each li, a in the primary navigation pick up the background of nav,
+  but nested li, a tags do not. We apply the background here, as well
+  as a simple top-border to serve as a divider between each menu item.
+*/
+
+ul > li > ul > li {
+  background: #eee;
+  border-top: 1px solid #ccc;
+}

@@ -1,0 +1,54 @@
+/*
+  The styles in this file set the foundation for a drop-down menu using
+  child selectors and the :hover pseudo-class. Excluding the rules in
+  'ul', notice this is accomplished by changing the display property
+  of each element and positioning.
+
+  The visual effects are applied in styled-nav.css.
+*/
+
+
+/*
+  Remove the bullets, left-side padding ul has by default.
+*/
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/*
+  Make each (top-level) list item appear next to each other,
+  horizontally.
+*/
+
+ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+/*
+  Do not display a nested ul by default!
+*/
+
+ul > li > ul {
+  display: none;
+}
+
+/*
+  Only reveal the hidden ul when a user hovers over the parent li!
+*/
+
+ul > li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+/*
+  Display li tags within a nested ul as blocks; this returns them
+  to a vertical stack.
+*/
+
+ul > li > ul > li {
+  display: block;
+}
