@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+}
+
+#container {
+  width: 960px;
+	margin: 0 auto;
+
+	/*
+	  No margin at the top; auto margin on the left and right.
+
+    This works because the browser knows the width of the containing
+    block and subtracts it from the window width. It then divides the
+    'unused' space by two and appends it to the left and right sides.
+
+    ...
+
+    Why 960px?
+
+    Studies show users are most comfortable when reading a line of text
+    limited to 60-70 characters.
+
+    Since our base font size is 16px...
+
+    960px / 16px per letter = 60 letters.
+
+    When laying out a web page, we generally do not want our content to
+    stretch across the entire screen. Although it may look fine on some
+    computers, text will become difficult to read on bigger monitors.
+
+    We can contain and limit content to a maximum width of 960 pixels,
+    which standardizes our page size. (Your design could always be
+    smaller than 960px -- as long as a line of text is less than ~60
+    characters, it will be comfortable for a user to read.)
+	*/
+}

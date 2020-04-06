@@ -1,0 +1,16 @@
+body {
+	font-family: sans-serif;
+}
+
+#container {
+	background-color: #eee;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+/*
+	max-width will limit our container from stretching beyond
+	the width we set, in this case, 960px. If a browser
+	window or screen is smaller than 960px, the container will
+	adjust the content to fill what space is available.
+*/
