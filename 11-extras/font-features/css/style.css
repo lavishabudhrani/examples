@@ -1,0 +1,24 @@
+@import url(""); /* Add TypeKit URL here */
+
+body {
+	font-family: operetta-32, serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h1::first-letter {
+	font-feature-settings: "swsh"
+}
+
+p {
+	font-size: 20px;
+	font-feature-settings: "ordn";
+}
+
+p.arrows {
+	font-feature-settings: "ss01";
+}
+
+table.styled td {
+	font-feature-settings: "tnum";
+}
