@@ -1,0 +1,30 @@
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li > span {
+  display: inline-block;
+  width: 100px;
+}
+
+.expert::after {
+  content: "🔹🔹🔹🔹";
+}
+
+.advanced::after {
+  content: "🔹🔹🔹";
+}
+
+.intermediate::after {
+  content: "🔹🔹";
+}
+
+.beginner::after {
+  content: "🔹";
+}
